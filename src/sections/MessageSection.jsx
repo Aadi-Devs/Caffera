@@ -90,7 +90,7 @@ const MessageSection = () => {
         )
 
 
-            // for words to appear one by one(can switch between chars and words, passed both in the SplitText function)
+        // for words to appear one by one(can switch between chars and words, passed both in the SplitText function)
         gsap.from(paragraphSplit.words, {
                 yPercent: 150,
                 stagger: 0.05,

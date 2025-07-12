@@ -2,6 +2,7 @@ import "./index.css"
 import Navbar from './components/Navbar'
 import HeroSection from './sections/HeroSection'
 import MessageSection from './sections/MessageSection'
+import FlavorsSection from "./sections/FlavorsSection"
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 
@@ -14,6 +15,7 @@ const App = () => {
         <Navbar />
         <HeroSection />
         <MessageSection />
+        <FlavorsSection />
         <div className="h-[100rem] relative z-20"></div>
       </>
   )

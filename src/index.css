@@ -125,15 +125,17 @@ body::-webkit-scrollbar {
     @apply min-h-dvh bg-milk;
 
     .flavor-text-scroll {
-      @apply rotate-[-3deg] md:translate-y-5 border-[.5vw] border-milk absolute z-10;
+      @apply rotate-[-3deg]  border-[.5vw] border-milk absolute z-10;
     }
+    /* md:translate-y-5 */
 
+    
     .first-text-split h1 {
       @apply md:text-center text-dark-brown;
     }
 
     .second-text-split h1 {
-      @apply md:text-center;
+      @apply md:text-center  text-dark-brown;
     }
 
     .slider-wrapper {
