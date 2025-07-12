@@ -15,29 +15,29 @@ const FlavorTitle = () => {
             type: "chars"
         })
 
-        gsap.to(firstMsgSplit.chars, {
-            color: "#e3a458",
-            ease: "power1.in",
-            stagger: 1,
+        gsap.from(firstMsgSplit.chars, {
+            yPercent: 100,
+            stagger: 0.02,
+            ease: "power1.inOut",
             scrollTrigger: {
-                trigger: ".first-text-split h1",
+                trigger: ".flavor-section h1",     // the main section which contains the title
                 start: "top center",
                 end: "bottom center",
-                scrub: true,
+                // scrub: true,
                 // markers: true,
             }
         })
 
-        gsap.to(secondMsgSplit.chars, {
-            color: "#e3a458",
+        gsap.from(secondMsgSplit.chars, {
+            yPercent: 100,
             ease: "power1.inOut",
-            stagger: 1,
+            stagger: 0.02,
             scrollTrigger: {
                 trigger: ".second-text-split h1",
                 start: "top center",
                 end: "bottom center",
-                scrub: true,
-                markers: true,
+                // scrub: true,
+                // markers: true,
             }
         })
 
@@ -51,7 +51,7 @@ const FlavorTitle = () => {
                 trigger: ".flavor-text-scroll",
                 start: "top center",
                 end: "bottom center",
-                scrub: true,
+                // scrub: true,     //! if we uncomment this then thwe banner will appear or dissappear with scroll
                 // markers: true,
             }
         })
@@ -68,13 +68,13 @@ const FlavorTitle = () => {
         
         <div
         style={{clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100%)"}} 
-        className="flavor-text-scroll mb-32">
+        className="flavor-text-scroll 2xl:mt-10">
             <div className="bg-mid-brown pb-2 2xl:pt-0 py-0">
                 <h2 className="text-milk">Freaking</h2>
             </div>
         </div>
 
-        <div className="overflow-hidden w-full 2xl:pt-28 py-0 pb-2 second-text-split">
+        <div className="overflow-hidden w-full 2xl:pt-20 py-0 pb-2 second-text-split">
             <h1 className="">delicious flavours</h1>
         </div>
     </div>

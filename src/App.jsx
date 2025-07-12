@@ -16,7 +16,7 @@ const App = () => {
         <HeroSection />
         <MessageSection />
         <FlavorsSection />
-        <div className="h-[100rem] relative z-20"></div>
+        <div className="h-[10rem] relative z-20"></div>
       </>
   )
 }

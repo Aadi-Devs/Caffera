@@ -129,7 +129,6 @@ body::-webkit-scrollbar {
     }
     /* md:translate-y-5 */
 
-    
     .first-text-split h1 {
       @apply md:text-center text-dark-brown;
     }
@@ -139,7 +138,7 @@ body::-webkit-scrollbar {
     }
 
     .slider-wrapper {
-      @apply lg:h-dvh min-h-dvh md:min-h-fit w-full mt-0 md:mt-20 xl:mt-0;
+      @apply lg:h-dvh min-h-dvh md:min-h-fit w-full mt-0 md:mt-20 xl:mt-0 2xl:mt-24;
 
       .flavors {
         @apply h-full w-full flex md:flex-row flex-col items-center 2xl:gap-72 lg:gap-52 md:gap-24 gap-7 flex-nowrap;

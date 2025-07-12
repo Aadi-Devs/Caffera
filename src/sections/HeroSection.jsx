@@ -31,8 +31,7 @@ const HeroSection = () => {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",              //! from initial position(defined in tag) to this position
             ease: "circ.out"                 //! to make it open smoothly
 
-            //! to make banner open with the main text, so they start at the same time
-        }, "-=0.5")
+        }, "-=0.5") //! to make banner open with the main text, so they start at the same time
                   .from(titleSplit.chars, {
                       yPercent: 100,
                       stagger: 0.02,
