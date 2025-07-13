@@ -8,11 +8,11 @@ const FlavorTitle = () => {
     useGSAP(()=>{
 
         const firstMsgSplit = SplitText.create(".first-text-split h1", {
-            type: "chars"
+            type: "chars, words"
         })
 
         const secondMsgSplit = SplitText.create(".second-text-split h1", {
-            type: "chars"
+            type: "chars, words"
         })
 
         gsap.from(firstMsgSplit.chars, {
@@ -40,6 +40,7 @@ const FlavorTitle = () => {
                 // markers: true,
             }
         })
+
 
 
 

@@ -148,7 +148,7 @@ body::-webkit-scrollbar {
         }
 
         .elements {
-          @apply absolute md:top-0 md:bottom-auto bottom-10 w-full;
+          @apply absolute md:top-[-60px] md:bottom-auto bottom-10 w-full;
         }
 
         h1 {
@@ -159,10 +159,10 @@ body::-webkit-scrollbar {
   }
 
   .nutrition-section {
-    @apply min-h-dvh 2xl:h-[120dvh] overflow-hidden relative;
+    @apply min-h-dvh 2xl:h-[120dvh] ;
 
     .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
+      @apply w-full absolute 2xl:h-full md:h-2/3 h-[20rem] left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
     }
 
     .nutrition-title {
