@@ -9,7 +9,7 @@ const FlavorSlider = () => {
     const sliderRef = useRef();
 
     const isTablet = useMediaQuery({
-        query: "(max-width: 1024px)",
+        query: "(max-width: 834px)",
     });
 
 
@@ -21,27 +21,8 @@ const FlavorSlider = () => {
         const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
         // getting the actual value of element from where we are starting the scroll in pixel, subtracting the width of section from whole width
 
-        // if(!isTablet){
-        //     const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: ".flavor-section",
-        //         start: "2% top",
-        //         end: `+=${scrollAmount}px`,     // giving the initial position of the the div
-        //         scrub: true,
-        //         pin: true,      // very important as it'll keep that section pinned until the scroll animation ends
-        //         // markers: true,
-        //     }
-        //     });
-
-        //     tl.to(".flavor-section", {
-        //     x: `-${scrollAmount + 1200}px`,     // we are specifying how much we want to scroll in x direction so that all the cards appear while scrolling
-        //     ease: "power1.inOut"
-        //     });
-        // }
-
-
-        // we have to specify how much we want to scroll from the intial position
-        const tl = gsap.timeline({
+        if(!isTablet){
+            const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".flavor-section",
                 start: "2% top",
@@ -50,12 +31,31 @@ const FlavorSlider = () => {
                 pin: true,      // very important as it'll keep that section pinned until the scroll animation ends
                 // markers: true,
             }
-        });
+            });
 
-        tl.to(".flavor-section", {
+            tl.to(".flavor-section", {
             x: `-${scrollAmount + 1200}px`,     // we are specifying how much we want to scroll in x direction so that all the cards appear while scrolling
             ease: "power1.inOut"
-        })
+            });
+        }
+
+
+        // we have to specify how much we want to scroll from the intial position
+        // const tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".flavor-section",
+        //         start: "2% top",
+        //         end: `+=${scrollAmount}px`,     // giving the initial position of the the div
+        //         scrub: true,
+        //         pin: true,      // very important as it'll keep that section pinned until the scroll animation ends
+        //         // markers: true,
+        //     }
+        // });
+
+        // tl.to(".flavor-section", {
+        //     x: `-${scrollAmount + 1200}px`,     // we are specifying how much we want to scroll in x direction so that all the cards appear while scrolling
+        //     ease: "power1.inOut"
+        // })
 
 
 

@@ -1,19 +1,39 @@
 import gsap from "gsap";
-import { nutrientLists } from "../constants";
+// import { useMediaQuery } from "react-responsive";
+import { nutrientLists } from "../constants/index";
+import { useGSAP } from "@gsap/react";
+import { useEffect, useState } from "react";
 
 const NutritionSection = () => {
 
-    gsap.to(".msg-text-nutrition", {
-            opacity: 1,
-            clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
-            scrollTrigger: {
-                trigger: ".msg-text-scroll",
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-                ease: "circ.inOut",
-            }
+
+    const [lists, setLists] = useState(nutrientLists);
+
+    useEffect(()=>{
+        // if(isMobile){
+        //     setLists(nutrientLists.slice(0,3))
+        // }else{
+            setLists(nutrientLists);
+        // }
+    }, [])
+
+
+    useGSAP(()=>{
+
+        gsap.to(".nutrition-text-scroll", {
+                opacity: 1,
+                clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
+                scrollTrigger: {
+                    trigger: ".nutrition-text-scroll",
+                    start: "top center",
+                    end: "bottom 40%",
+                    scrub: true,
+                    ease: "circ.inOut",
+                    // markers: true,
+                }
+        })
     })
+
 
 
 
@@ -31,7 +51,7 @@ const NutritionSection = () => {
        <div className="flex md:flex-row flex-col justify-between md:px-10 px-5 mt-14 md:mt-0">
             <div className="relative inline-block md:translate-y-20">
                 <div className="general-title relative flex flex-col justify-center items-center gap-24">
-                    <div className="overflow-hidden place-self-start">
+                    <div className="overflow-hidden place-self-start p-2">
                         <h1>It still does</h1>
                     </div>
                     <div style={{
@@ -54,7 +74,7 @@ const NutritionSection = () => {
 
 
 
-            <div className="nutrition-box">
+            <div className="nutrition-box z-20">
                 <div className="list-wrapper">
                     {
                         nutrientLists.map((nutrient, index)=>{
