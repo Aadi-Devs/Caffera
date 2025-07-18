@@ -68,12 +68,38 @@ const HeroSection = () => {
   return (
     <section className="bg-main-bg">
       <div className="hero-container overflow-hidden">
-        <img
-          src="/images/static-img.png"
+        {/* <img
+          src="/images/hero-img.png"
           alt=""
-          className="absolute bottom-[-35px] left-1/2 -translate-x-1/2 object-auto lg:scale-100 md:scale-150"
+          className="absolute top-100 object-cover z-1 left-1/2 -translate-x-1/2 object-auto lg:scale-100 md:scale-150"
+        /> */}
+
+
+        {/* Mobile: Show Image */}
+        <img
+          src="/images/hero-img.png"
+          alt="Hero"
+          className="block lg:hidden absolute top-100 object-cover z-1 left-1/2 -translate-x-1/2 object-auto md:scale-150"
         />
-        <div className="hero-content opacity-0">
+
+        {/* Large devices: Show Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="hidden lg:block absolute top-100 object-cover z-1 left-1/2 -translate-x-1/2 object-auto lg:scale-100"
+        >
+          {/* <source src="/videos/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag. */}
+        </video>
+
+
+
+
+
+
+        <div className="hero-content opacity-0 z-10">
             <div className="overflow-hidden">
                 <h1 className="hero-title">Freaking Delicious</h1>
             </div>

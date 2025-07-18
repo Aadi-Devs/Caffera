@@ -3,18 +3,24 @@ import gsap from "gsap";
 import { nutrientLists } from "../constants/index";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const NutritionSection = () => {
+
+
+    const isMobile = useMediaQuery({
+        query: "(max-width: 768px)",
+    });
 
 
     const [lists, setLists] = useState(nutrientLists);
 
     useEffect(()=>{
-        // if(isMobile){
-        //     setLists(nutrientLists.slice(0,3))
-        // }else{
+        if(isMobile){
+            setLists(nutrientLists.slice(0,3))
+        }else{
             setLists(nutrientLists);
-        // }
+        }
     }, [])
 
 
@@ -49,6 +55,7 @@ const NutritionSection = () => {
        <img src="/images/big-img.png" alt="" className="big-img" />
 
        <div className="flex md:flex-row flex-col justify-between md:px-10 px-5 mt-14 md:mt-0">
+
             <div className="relative inline-block md:translate-y-20">
                 <div className="general-title relative flex flex-col justify-center items-center gap-24">
                     <div className="overflow-hidden place-self-start p-2">
@@ -77,7 +84,7 @@ const NutritionSection = () => {
             <div className="nutrition-box z-20">
                 <div className="list-wrapper">
                     {
-                        nutrientLists.map((nutrient, index)=>{
+                        lists.map((nutrient, index) => (
                             <div key={index} className="relative flex-1 col-center">
                                 <div className="">
                                     <p className="md:text-lg font-paragraph">{nutrient.label}</p>
@@ -86,12 +93,12 @@ const NutritionSection = () => {
                                 </div>
 
                                 {
-                                    index !== nutrientLists.length - 1 && (
+                                    index !== lists.length - 1 && (
                                         <div className="spacer-border" />
                                     )
                                 }
                             </div>
-                        })
+                        ))
                     }
                 </div>
             </div>

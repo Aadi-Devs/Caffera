@@ -159,10 +159,10 @@ body::-webkit-scrollbar {
   }
 
   .nutrition-section {
-    @apply min-h-dvh 2xl:h-[120dvh] ;
+    @apply min-h-dvh 2xl:h-[120dvh] relative;
 
     .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-[2rem] left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
+      @apply w-full absolute 2xl:h-full md:h-2/3 h-[27rem] left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
     }
 
     .nutrition-title {
@@ -174,10 +174,10 @@ body::-webkit-scrollbar {
     }
 
     .nutrition-box {
-      @apply absolute md:bottom-16 bottom-5 w-full md:px-0 px-5;
+      @apply absolute md:bottom-16 bottom-5 w-full md:px-0 px-5 2xl:left-31 right-[0.2px] 2xl:right-0;
 
       .list-wrapper {
-        @apply bg-[#fdebd2] rounded-full border-[.5vw] border-[#e8ddca] mx-auto max-w-7xl md:py-8 py-5 md:px-0 px-5 flex justify-between items-center;
+        @apply bg-[#fdebd2] rounded-full border-[.5vw] border-[#e8ddca] max-w-7xl md:py-8 py-5 md:px-0 px-5 flex justify-between items-center 2xl:mr-[10rem];
 
         p {
           @apply text-[#865720];
@@ -191,7 +191,7 @@ body::-webkit-scrollbar {
   }
 
   .benefit-section {
-    @apply min-h-dvh bg-[#222123] overflow-hidden relative;
+    @apply min-h-dvh bg-[#222123] overflow-hidden;
 
     p {
       @apply text-milk font-paragraph text-center text-lg;

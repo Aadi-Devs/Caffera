@@ -52,7 +52,7 @@ const FlavorTitle = () => {
                 trigger: ".flavor-text-scroll",
                 start: "top center",
                 end: "bottom center",
-                // scrub: true,     //! if we uncomment this then thwe banner will appear or dissappear with scroll
+                scrub: true,     //! if we uncomment this then thwe banner will appear or dissappear with scroll
                 // markers: true,
             }
         })
