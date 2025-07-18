@@ -88,10 +88,10 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          className="hidden lg:block absolute top-100 object-cover z-1 left-1/2 -translate-x-1/2 object-auto lg:scale-100"
+          className="hidden lg:block absolute w-full top-0 object-cover z-1 left-1/2 -translate-x-1/2 object-auto lg:scale-130"
         >
-          {/* <source src="/videos/hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag. */}
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          {/* Your browser does not support the video tag. */}
         </video>
 
 
