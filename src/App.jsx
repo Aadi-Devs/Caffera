@@ -8,6 +8,7 @@ import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react"
 import NutritionSection from "./sections/NutritionSection"
 import BenefitSection from "./sections/BenefitSection"
+import TestimonialsSection from "./sections/TestimonialsSection"
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 // once a plugin is registered we can use it anywhere in the app  
@@ -20,7 +21,7 @@ const App = () => {
   // for smooth scroll(effect part)
   useGSAP(()=>{
     ScrollSmoother.create({
-      smooth: 3, 
+      smooth: 1, 
       effects: true,
     });
   });
@@ -40,7 +41,12 @@ const App = () => {
             <MessageSection />
             <FlavorsSection />
             <NutritionSection />
-            <BenefitSection />
+
+            <div>
+              <BenefitSection />
+              <TestimonialsSection />
+            </div>
+
             {/* <div className="h-[10rem] relative"></div> */}
           </div>
         </div>
