@@ -22,7 +22,7 @@ const App = () => {
   // for smooth scroll(effect part)
   useGSAP(()=>{
     ScrollSmoother.create({
-      smooth: 1, 
+      smooth: 3, 
       effects: true,
     });
   });
