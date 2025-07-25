@@ -23,6 +23,43 @@ const TestimonialsSection = () => {
         gsap.set(".testimonials-section", {
             marginTop: "-140vh",
         });
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".testimonials-section",
+                start: "top bottom",
+                end: "150% top",
+                scrub: true,
+                // markers: true,
+            },
+        });
+
+
+        tl.to(".testimonials-section .first-title", {
+            xPercent: 70,
+        }).to(".testimonials-section .second-title", {
+            xPercent: -50,
+        }, "<").to(".testimonials-section .third-title", {
+            xPercent: 50,
+        }, "<")
+
+
+        const pinTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".testimonials-section",
+                start: "10% top",
+                end: "150% top",
+                scrub: 1.5,
+                pin: true,
+                // markers: true,
+            },
+        });
+
+        pinTl.from(".vd-card", {
+            yPercent: 150,
+            stagger: 0.2,
+            ease: "power1.inOut"
+        })
     });
 
 

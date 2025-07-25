@@ -214,7 +214,7 @@ body::-webkit-scrollbar {
     }
 
     .vd-pin-section {
-      @apply md:h-[110vh] h-dvh overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20 2xl:mt-[4rem];
+      @apply md:h-[100vh] h-dvh overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20 2xl:mt-[4rem];
 
       video {
         @apply size-full absolute inset-0 object-cover;
@@ -231,13 +231,13 @@ body::-webkit-scrollbar {
   }
 
   .testimonials-section {
-    @apply bg-milk relative w-full h-[120dvh] z-10;
+    @apply bg-milk relative w-full h-[150dvh] z-10;
 
     .pin-box {
-      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[50vh];
+      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-76 bottom-[80vh];
 
       .vd-card {
-        @apply md:w-90 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-milk;
+        @apply md:w-80 w-60 flex-none md:rounded-[2vw] rounded-3xl -ms-36 overflow-hidden 2xl:relative absolute border-[.5vw] border-milk;
       }
     }
 
@@ -247,7 +247,7 @@ body::-webkit-scrollbar {
   }
 
   .footer-section {
-    @apply 2xl:min-h-dvh overflow-hidden relative bg-[#222123];
+    @apply 2xl:min-h-dvh min-h-dvh overflow-hidden relative bg-[#222123];
 
     .social-btn {
       @apply border border-[#faeade33] md:size-[5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;
