@@ -25,7 +25,7 @@ const FooterSection = () => {
             <div className="mt-40 md:px-10 px-5 gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
                 <div className="flex items-center md:gap-16 gap-5">
                     <div>
-                        <p>SPYLT Flavors</p>
+                        <p>SPYLT Flavor</p>
                     </div>
                     <div>
                         <p>Chug Club</p>
